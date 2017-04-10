@@ -1,7 +1,9 @@
 const router = require('express').Router()
-const exampleController = require('../controllers/example.controller')
+const todoController = require('../controllers/todo.controller')
 
-router.get('/api/ping', exampleController.ping)
+router.get('/api/todos/ping', todoController.ping)
+router.post('/api/todos', todoController.create)
+router.get('/api/todos', todoController.list)
 
 // frontend routes =========================================================
 // route to handle all angular requests
